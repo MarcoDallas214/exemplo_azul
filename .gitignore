@@ -1,3 +1,4 @@
-EXEMPLO_AZUL/node_modules
+
 # Keep environment variables out of version control
-EXEMPLO_AZUL/env
+exemplo_azul\node_modules
+exemplo_azul\.env
