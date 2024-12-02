@@ -13,10 +13,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model cliente {
+model Cliente {
   id_cliente Int @id @default(autoincrement())
-  data_inclusao DateTime 
-  data_nasc DateTime
+  data_inclusao String @db.VarChar(10) 
+  data_nasc String @db.VarChar(10)
   nome_cliente String @db.VarChar(100)
   estado_civil String @db.VarChar(10)
   naturalidade String @db.VarChar(30)
@@ -31,11 +31,11 @@ model cliente {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
  
-  @@map("clientes")
+  @@map("cliente")
 
 }
 
-model dados_movel {
+model Dados_movel {
   id_dados_movel  Int @id @default(autoincrement())
   fase_imovel String @db.VarChar(20)
   nome_empreendimento String @db.VarChar(50)
@@ -57,7 +57,7 @@ model dados_movel {
 
 }
 
-model docs_modelo { 
+model Docs_modelo { 
  id_docs_modelo Int @id @default(autoincrement())
  boleto_pagto_escritura String @db.VarChar(50)
  boleto_pagto_escritura_itbi String @db.VarChar(50)
@@ -76,7 +76,7 @@ model docs_modelo {
 
 }
 
-model formas_pagto {
+model Formas_pagto {
  id_formas_pagto Int @id @default(autoincrement())
  valor_sinal_entrada Decimal @db.Decimal(10,2)
  qtd_parc_sinal_entrada Int
@@ -94,7 +94,7 @@ model formas_pagto {
 
 }
 
-model documentos {
+model Documentos {
   id_documentos Int @id @default(autoincrement())
   certidao_casamento String? @db.VarChar(50)
   certidao_nascimento String? @db.VarChar(50)

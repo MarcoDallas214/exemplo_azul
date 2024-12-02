@@ -1,0 +1,20 @@
+#post clientes
+POST http://localhost:3000/clientes
+content-type: application/json
+
+{
+  "data_inclusao": "20-05-2022",
+  "data_nasc DateTime": "12-02-1996",
+  "nome_cliente": "wellington",
+  "estado_civil": "solteiro",
+  "naturalidade": "recife",
+  "nacionalidade": "brasileiro",
+  "escolaridade": "ensino_medio_completo",
+  "profissao": "vendedor",
+  "situacao": "aprovado",
+  "cpf_cliente": "125478632",
+  "rg_cliente": "2546215",
+  "renda_mensal": 235414,
+  "comprovante_renda": "gggggggggg",
+}
+

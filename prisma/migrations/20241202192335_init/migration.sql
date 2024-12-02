@@ -1,8 +1,8 @@
 -- CreateTable
-CREATE TABLE `clientes` (
+CREATE TABLE `cliente` (
     `id_cliente` INTEGER NOT NULL AUTO_INCREMENT,
-    `data_inclusao` DATETIME(3) NOT NULL,
-    `data_nasc` DATETIME(3) NOT NULL,
+    `data_inclusao` VARCHAR(10) NOT NULL,
+    `data_nasc` VARCHAR(10) NOT NULL,
     `nome_cliente` VARCHAR(100) NOT NULL,
     `estado_civil` VARCHAR(10) NOT NULL,
     `naturalidade` VARCHAR(30) NOT NULL,
@@ -17,8 +17,8 @@ CREATE TABLE `clientes` (
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updatedAt` DATETIME(3) NOT NULL,
 
-    UNIQUE INDEX `clientes_cpf_cliente_key`(`cpf_cliente`),
-    UNIQUE INDEX `clientes_rg_cliente_key`(`rg_cliente`),
+    UNIQUE INDEX `cliente_cpf_cliente_key`(`cpf_cliente`),
+    UNIQUE INDEX `cliente_rg_cliente_key`(`rg_cliente`),
     PRIMARY KEY (`id_cliente`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
