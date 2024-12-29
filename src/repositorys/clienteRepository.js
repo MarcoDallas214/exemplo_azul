@@ -96,7 +96,7 @@ export const updateCliente = async (id_cliente, data) => {
   return cliente
 };
 
-export const deletecliente = async (id_cliente) => {
+export const deletaCliente = async (id_cliente) => {
     const cliente = await prisma.cliente.delete({
         where:{
             id_cliente,

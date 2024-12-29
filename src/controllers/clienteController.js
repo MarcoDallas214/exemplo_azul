@@ -1,4 +1,4 @@
-import { createCliente , getAll, getById, updateCliente,deletecliente } from "../repositorys/clienteRepository.js";
+import { createCliente , getAll, getById, updateCliente, deletaCliente } from "../repositorys/clienteRepository.js";
 import express from 'express'
 
  export const create = async (req, res) => {
@@ -39,9 +39,9 @@ export const update = async (req,res)=> {
   } 
 }
 
-export const deletar = async (req,res)=>{
+export const deletar= async (req,res)=>{
   try {
-    const cliente = await deletecliente(Number(req.params.id));
+    const cliente = await deletaCliente(Number(req.params.id));
     res.status(200).send(cliente);
   } catch (error) {
     res.status(400).send(error)
